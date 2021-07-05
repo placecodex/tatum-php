@@ -12,7 +12,8 @@ apt-get install php php-gmp php-mbstring php-mcrypt
 
 <h4> To Install this Lib</h4>
 
-```composer require placecodex/tatum-php
+```php 
+ composer require placecodex/tatum-php
  ```
  
 <h3>Try an example</h3>
