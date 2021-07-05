@@ -12,11 +12,7 @@ apt-get install php php-gmp php-mbstring php-mcrypt
 
 <h4> To Install this Lib</h4>
 
-```bash
- git clone https://github.com/HighBreedTech/tatum-php
- cd tatum-php
- php -r "readfile('https://getcomposer.org/installer');" | php
- php composer.phar install
+```composer require placecodex/tatum-php
  ```
  
 <h3>Try an example</h3>
