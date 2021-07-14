@@ -1,3 +1,11 @@
+
+this package was cloned from [tatumio/tatum-php](https://github.com/tatumio/tatum-php "tatumio/tatum-php") and adapted to laravel
+
+Thanks [tatum team](https://github.com/tatumio/ "tatum team") for the excellent work
+
+
+
+
 # tatum-php
 Tatum.io Official PHP SDK for dev
 
