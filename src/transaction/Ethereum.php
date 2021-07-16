@@ -92,7 +92,7 @@ function prepareSignedEthereumTransaction(array $body){
     $amount,
     $gasPrice,
     $gasLimit,
-    $data,
+    $data ,
     $nonce) = $body;
 
     if(!$this->in_arrayi($currency, $this->supportedETHBlockchain)){
@@ -100,7 +100,10 @@ function prepareSignedEthereumTransaction(array $body){
     }
 
     $gasPrice = $gasPrice && $gasPrice != "" && $gasPrice > 0 ? $this->ethWeiToHex($this->ethConvertGweiToWei($gasPrice)) : $this->ethWeiToHex($this->ethGetGasPriceInWei());
+    /**
     $data = $data != "" ? $this->stringToHex($data) : $this->stringToHex("Transaction from: {$from} to: {$to} amount of {$amount} {$currency} with Gas Fee of {$this->ethHexToWei($gasPrice)}");
+   **/
+
     $gasLimit = $gasLimit && $gasLimit != "" && $gasLimit > 0 ? $this->ethWeiToHex($this->ethConvertGweiToWei($gasLimit)) : $this->ethWeiToHex(strlen($data) * 68 + 21000);
     $nonce = $nonce != "" ? $nonce : ($this->ethGetTransactionsCount($from) + 0);
     $amount = $this->ethToHex($amount);
@@ -113,7 +116,7 @@ if($currency === 'ETH'){
     'gas' => $gasLimit,
     'gasPrice' => $gasPrice,
     'value' => $amount,
-    'data' => '',//$data,
+    'data' => $data,//$data,
     "chainId" => $chainID,
 ]);
     }
