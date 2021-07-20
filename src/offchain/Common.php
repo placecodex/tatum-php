@@ -72,7 +72,7 @@ return $this->post("/offchain/ethereum/erc20/{$name}/{$address}");
  * For more details, see <a href="https://tatum.io/apidoc#operation/storeTrcAddress" target="_blank">Tatum API documentation</a>
  */
 function storeTrcContractAddress(string $name, string $address){
-return $this->post("/offchain/tron/trc/{$name}/{$address}");
+return $this->post(array(),"/offchain/tron/trc/{$name}/{$address}");
 }
 
 /**
