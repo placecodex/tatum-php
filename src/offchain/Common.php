@@ -15,7 +15,7 @@ trait OffchainCommon{
  */
 function generateDepositAddress(string $id, int $index = null){
 $url = "/offchain/account/{$id}/address";
-return $this->post($index === '' || $index === null ? $url : $url."?index={$index}");
+return $this->post(array(),$index === '' || $index === null ? $url : $url."?index={$index}");
 }
 
 /**
@@ -51,7 +51,7 @@ return $this->get($url);
  * For more details, see <a href="https://tatum.io/apidoc#operation/assignAddress" target="_blank">Tatum API documentation</a>
  */
 function assignDepositAddress(string $id, string $address){
-return $this->post("/offchain/account/{$id}/address/{$address}");
+return $this->post(array(), "/offchain/account/{$id}/address/{$address}");
 }
 
 /**
